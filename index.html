@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>StatementDue — California Statement of Information Filing Service | $39</title>
-<meta name="description" content="We prepare and submit your California Statement of Information (SI-550 / LLC-12) so you never miss the deadline or risk the $250 penalty. Flat $39 + state fee. Private filing service — not a government agency.">
+<title>StatementDue — California Statement of Information Filing Service | $49</title>
+<meta name="description" content="We prepare and submit your California Statement of Information (SI-550 / LLC-12) so you never miss the deadline or risk the $250 penalty. Flat $49 + state fee. Private filing service — not a government agency.">
 <style>
 :root{--navy:#1b2a4a;--blue:#2563eb;--gold:#d97706;--bg:#f8fafc;--ink:#0f172a;--mut:#64748b;--line:#e2e8f0;--ok:#059669;--warn:#b91c1c}
 *{margin:0;padding:0;box-sizing:border-box}
@@ -84,13 +84,13 @@ footer a{color:#cbd5e1}
 
 <header><div class="wrap nav">
   <a class="logo" href="/">Statement<span>Due</span><small>California Statement of Information Filing</small></a>
-  <a class="cta" href="#file">File Now — $39</a>
+  <a class="cta" href="#file">File Now — $49</a>
 </div></header>
 
 <div class="hero"><div class="wrap">
   <h1>Your California Statement of Information — prepared &amp; filed for you.</h1>
   <p class="sub">Every CA corporation must file yearly (LLCs every 2 years). Miss it and the Franchise Tax Board adds a <strong>$250 penalty</strong> — keep missing it and your company can be <strong>suspended</strong>. Fill out one 3-minute form and we handle the rest.</p>
-  <div class="price">Flat $39 service fee + state filing fee ($20–$25). No account. No subscription required.</div>
+  <div class="price">Flat $49 service fee + state filing fee ($20–$25). No account. No subscription required.</div>
   <a class="btn" href="#file">Start My Filing →</a>
   <div class="trust"><span>✓ Corporations (SI-550) &amp; LLCs (LLC-12)</span><span>✓ Submitted to the CA Secretary of State</span><span>✓ Confirmation &amp; copy emailed to you</span></div>
 </div></div>
@@ -223,9 +223,9 @@ footer a{color:#cbd5e1}
     </fieldset>
 
     <div class="pricebox">
-      <div class="line"><span>StatementDue service (preparation + submission)</span><span>$39.00</span></div>
+      <div class="line"><span>StatementDue service (preparation + submission)</span><span>$49.00</span></div>
       <div class="line"><span>California state filing fee (paid to the Secretary of State)</span><span id="stateFee">$25.00</span></div>
-      <div class="line total"><span>Total today</span><span id="totalFee">$64.00</span></div>
+      <div class="line total"><span>Total today</span><span id="totalFee">$74.00</span></div>
     </div>
 
     <div class="check-row"><input type="checkbox" id="agreeTos" required><span>I confirm the information above is accurate, I am authorized to file for this entity, and I agree to the <a href="/terms.html" target="_blank">Terms of Service</a>. I understand StatementDue is a private filing service, not a government agency or law firm, and does not provide legal advice.</span></div>
@@ -255,7 +255,7 @@ footer a{color:#cbd5e1}
 
 <script>
 const MAKE_WEBHOOK_URL = "https://hook.us2.make.com/pnyqk22o96gjoigahhayjzd8j84vd2mv";
-const CHECKER_WEBHOOK_URL = "REPLACE_WITH_CHECKER_WEBHOOK_URL";
+const CHECKER_WEBHOOK_URL = "https://hook.us2.make.com/n5bprlp8df58r1vat2o2ei3yqbdth2jk";
 
 function switchType(){
   const isLLC = document.getElementById('etLLC').checked;
@@ -263,7 +263,7 @@ function switchType(){
   document.getElementById('fsMembers').style.display = isLLC?'block':'none';
   document.getElementById('llcStateRow').style.display = isLLC?'block':'none';
   document.getElementById('stateFee').textContent = isLLC?'$20.00':'$25.00';
-  document.getElementById('totalFee').textContent = isLLC?'$59.00':'$64.00';
+  document.getElementById('totalFee').textContent = isLLC?'$69.00':'$74.00';
 }
 function toggleMail(){
   document.getElementById('mailBlock').style.display = document.getElementById('mailSame').checked?'none':'block';
@@ -347,9 +347,9 @@ function submitOrder(ev){
     email:val('custEmail'),
     sign_name:val('signName'),sign_title:val('signTitle'),
     reminder_optin:document.getElementById('reminderOpt').checked?'yes':'no',
-    service_fee:'39.00',
+    service_fee:'49.00',
     state_fee:isLLC?'20.00':'25.00',
-    unit_amount:isLLC?5900:6400
+    unit_amount:isLLC?6900:7400
   };
   const btn=document.getElementById('payBtn');btn.disabled=true;btn.textContent='Preparing secure checkout…';
   fetch(MAKE_WEBHOOK_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})
