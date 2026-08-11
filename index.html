@@ -353,7 +353,7 @@ function submitOrder(ev){
   };
   const btn=document.getElementById('payBtn');btn.disabled=true;btn.textContent='Preparing secure checkout…';
   fetch(MAKE_WEBHOOK_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})
-    .then(r=>r.json()).then(d=>{ if(d&&d.url){window.location=d.url;} else{throw new Error('no url');} })
+    .then(r=>r.json()).then(d=>{ var u=d&&(d.checkout_url||d.url); if(u){window.location=u;} else{throw new Error('no url');} })
     .catch(()=>{btn.disabled=false;btn.textContent='Review & Pay Securely →';showError('Something went wrong starting checkout. Please try again or email support@statementdue.com.');});
   return false;
 }
