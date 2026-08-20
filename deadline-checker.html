@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18380525629"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18380525629');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>California Statement of Information Due Date Calculator — Free | StatementDue</title>
+<meta name="description" content="Find out exactly when your California Statement of Information is due. Enter your registration date and entity type — we'll show your 6-month filing window, the deadline, and what the $250 penalty applies to. Free, no signup.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://statementdue.com/deadline-checker.html">
+<meta property="og:title" content="California Statement of Information Due Date Calculator">
+<meta property="og:description" content="Enter your registration date. See your exact filing window and deadline. Free.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://statementdue.com/deadline-checker.html">
+<style>
+:root{--navy:#1b2a4a;--blue:#2563eb;--gold:#d97706;--bg:#f8fafc;--ink:#0f172a;--mut:#64748b;--line:#e2e8f0;--ok:#059669;--warn:#b91c1c}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65}
+a{color:var(--blue)}
+
+nav{background:#fff;border-bottom:1px solid var(--line);padding:14px 6%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:20}
+.logo{font-weight:800;font-size:1.2rem;color:var(--navy);text-decoration:none;letter-spacing:-.02em}
+.logo span{color:var(--blue)}
+.nav-cta{background:var(--blue);color:#fff;padding:9px 18px;border-radius:7px;font-size:.85rem;font-weight:600;text-decoration:none}
+
+.hero{text-align:center;padding:52px 6% 26px;max-width:760px;margin:0 auto}
+.pill{display:inline-block;background:#eff6ff;color:var(--blue);border-radius:20px;padding:5px 15px;font-size:.78rem;font-weight:600;margin-bottom:16px}
+h1{font-size:clamp(1.7rem,4.4vw,2.5rem);line-height:1.2;color:var(--navy);margin-bottom:12px;letter-spacing:-.02em}
+.hero p{color:var(--mut);font-size:1rem}
+
+.wrap{max-width:760px;margin:0 auto;padding:0 6% 60px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px 24px;margin-bottom:20px}
+.card h2{font-size:1.2rem;color:var(--navy);margin-bottom:4px}
+.card .sub{color:var(--mut);font-size:.87rem;margin-bottom:20px}
+
+.fg{margin-bottom:16px}
+label{display:block;font-size:.85rem;font-weight:600;margin-bottom:6px}
+select,input[type=date]{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:8px;font-family:inherit;font-size:.95rem;background:#fff;color:var(--ink)}
+select:focus,input:focus{outline:none;border-color:var(--blue)}
+.help{font-size:.78rem;color:var(--mut);margin-top:6px;line-height:1.5}
+.btn{display:inline-block;width:100%;background:var(--blue);color:#fff;border:none;padding:13px;border-radius:8px;font-family:inherit;font-size:.95rem;font-weight:700;cursor:pointer;text-align:center;text-decoration:none}
+.btn:hover{background:#1d4ed8}
+.btn-gold{background:var(--gold)}
+.btn-gold:hover{background:#b45309}
+
+/* RESULT */
+#result{display:none}
+.status{border-radius:10px;padding:16px 18px;margin-bottom:18px;font-size:.95rem;line-height:1.55}
+.status.open{background:#ecfdf5;border:1px solid #a7f3d0;color:#065f46}
+.status.soon{background:#fffbeb;border:1px solid #fde68a;color:#92400e}
+.status.shut{background:#eff6ff;border:1px solid #bfdbfe;color:#1e40af}
+.status b{display:block;font-size:1.05rem;margin-bottom:3px}
+table.res{width:100%;border-collapse:collapse;font-size:.9rem}
+table.res th,table.res td{text-align:left;padding:10px 4px;border-bottom:1px solid var(--line);vertical-align:top}
+table.res th{color:var(--mut);font-weight:600;width:46%}
+table.res td{font-weight:600}
+.initial-note{background:#fef2f2;border-left:3px solid var(--warn);padding:11px 13px;border-radius:5px;font-size:.85rem;margin-top:16px;line-height:1.55}
+
+.upsell{background:linear-gradient(135deg,#1b2a4a,#243b6b);color:#fff;border-radius:14px;padding:26px 24px;margin-bottom:20px}
+.upsell h3{font-size:1.2rem;margin-bottom:6px}
+.upsell p{color:#c7d2e5;font-size:.88rem;margin-bottom:16px}
+.upsell ul{list-style:none;margin-bottom:18px}
+.upsell li{font-size:.88rem;padding:5px 0 5px 24px;position:relative}
+.upsell li::before{content:'✓';position:absolute;left:0;color:#4ade80;font-weight:700}
+.upsell .price{font-size:1.6rem;font-weight:800}
+.upsell .price small{font-size:.8rem;font-weight:400;color:#c7d2e5}
+
+.faq h2{font-size:1.35rem;color:var(--navy);margin:34px 0 14px}
+.faq h3{font-size:1rem;color:var(--navy);margin:20px 0 6px}
+.faq p{font-size:.92rem;color:#334155;margin-bottom:10px}
+.faq ul{margin:0 0 12px 20px;font-size:.92rem;color:#334155}
+.faq li{margin-bottom:5px}
+.srctable{width:100%;border-collapse:collapse;font-size:.85rem;margin:12px 0 18px}
+.srctable th,.srctable td{border:1px solid var(--line);padding:7px 10px;text-align:left}
+.srctable th{background:#f1f5f9;font-weight:600}
+
+.disclaim{font-size:.8rem;color:var(--mut);line-height:1.7;border-top:1px solid var(--line);padding-top:18px;margin-top:26px}
+
+footer{background:#fff;border-top:1px solid var(--line);padding:30px 6%;text-align:center}
+.f-links{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-bottom:12px}
+.f-links a{font-size:.82rem;color:var(--mut);text-decoration:none}
+.f-links a:hover{color:var(--blue)}
+footer p{font-size:.78rem;color:var(--mut)}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">Statement<span>Due</span></a>
+  <a href="/" class="nav-cta">File for me — $49</a>
+</nav>
+
+<div class="hero">
+  <div class="pill">Free · No signup</div>
+  <h1>When is my California Statement of Information due?</h1>
+  <p>California doesn't use one deadline for everyone. Your filing window depends on the month you registered. Enter that date and we'll show you the exact window.</p>
+</div>
+
+<div class="wrap">
+
+  <div class="card">
+    <h2>Check your deadline</h2>
+    <p class="sub">Nothing is stored. This runs entirely in your browser.</p>
+
+    <div class="fg">
+      <label for="etype">Entity type</label>
+      <select id="etype">
+        <option value="corp">Corporation (stock) — Form SI-550</option>
+        <option value="llc">Limited Liability Company — Form LLC-12</option>
+        <option value="nonprofit">Nonprofit corporation — Form SI-100</option>
+      </select>
+    </div>
+
+    <div class="fg">
+      <label for="regdate">Registration date</label>
+      <input type="date" id="regdate">
+      <p class="help">
+        This is the <strong>"Date Filed"</strong> on your entity's record in the state's
+        <a href="https://bizfileonline.sos.ca.gov/search/business" target="_blank" rel="noopener">Business Search</a>.
+        Look it up free — no account needed.
+      </p>
+    </div>
+
+    <button class="btn" id="checkBtn">Show my filing window</button>
+  </div>
+
+  <div id="result">
+    <div class="card">
+      <div class="status" id="statusBox"></div>
+      <table class="res">
+        <tr><th>Entity type</th><td id="rType"></td></tr>
+        <tr><th>How often you file</th><td id="rFreq"></td></tr>
+        <tr><th>Your filing window opens</th><td id="rStart"></td></tr>
+        <tr><th>Your deadline</th><td id="rEnd"></td></tr>
+        <tr><th>State filing fee</th><td id="rFee"></td></tr>
+        <tr><th>Penalty if you miss it</th><td id="rPen"></td></tr>
+      </table>
+      <div id="initialNote" class="initial-note" style="display:none"></div>
+    </div>
+
+    <div class="upsell">
+      <h3>Knowing the date is the easy part.</h3>
+      <p>Since August 1, 2026 the state requires established User Access before anyone can file online for your entity — including you. Most people find that out the week it's due.</p>
+      <ul>
+        <li>We handle the filing through the state's official online system</li>
+        <li>We walk you through the state's authorization step, whichever path applies to you</li>
+        <li>Filed typically within 1 business day of your approval</li>
+        <li>You get the filed copy and confirmation by email</li>
+        <li>Optional reminder before your next deadline</li>
+      </ul>
+      <div class="price" style="margin-bottom:14px">$49 <small>+ state fee</small></div>
+      <a class="btn btn-gold" href="/">File my Statement of Information →</a>
+    </div>
+  </div>
+
+  <div class="faq">
+    <h2>How the California filing window works</h2>
+    <p>
+      California gives you a <strong>six-month window</strong>, not a single date. The window ends on
+      the last day of the month you registered in, and opens on the first day of the month five months
+      before that. File any time inside the window.
+    </p>
+    <table class="srctable">
+      <tr><th>If you registered in…</th><th>Your window opens</th><th>Your deadline</th></tr>
+      <tr><td>January</td><td>August 1</td><td>January 31</td></tr>
+      <tr><td>February</td><td>September 1</td><td>Last day of February</td></tr>
+      <tr><td>March</td><td>October 1</td><td>March 31</td></tr>
+      <tr><td>April</td><td>November 1</td><td>April 30</td></tr>
+      <tr><td>May</td><td>December 1</td><td>May 31</td></tr>
+      <tr><td>June</td><td>January 1</td><td>June 30</td></tr>
+      <tr><td>July</td><td>February 1</td><td>July 31</td></tr>
+      <tr><td>August</td><td>March 1</td><td>August 31</td></tr>
+      <tr><td>September</td><td>April 1</td><td>September 30</td></tr>
+      <tr><td>October</td><td>May 1</td><td>October 31</td></tr>
+      <tr><td>November</td><td>June 1</td><td>November 30</td></tr>
+      <tr><td>December</td><td>July 1</td><td>December 31</td></tr>
+    </table>
+
+    <h3>How often do I file?</h3>
+    <ul>
+      <li><strong>Corporations (stock):</strong> every year, on Form SI-550</li>
+      <li><strong>LLCs:</strong> every two years, on Form LLC-12</li>
+      <li><strong>Nonprofit corporations:</strong> every two years, on Form SI-100</li>
+    </ul>
+    <p>
+      For the biennial filers, the years line up with your registration year. Register in an odd year
+      and you file in odd years; register in an even year and you file in even years.
+    </p>
+
+    <h3>What if I just registered?</h3>
+    <p>
+      Your <strong>initial</strong> Statement of Information is due within <strong>90 days</strong> of
+      registration, regardless of the window above. After that first one, you fall into the regular cycle.
+    </p>
+
+    <h3>What actually happens if I'm late?</h3>
+    <p>
+      The Secretary of State sends a notice of delinquency giving you additional time to file. If you
+      still don't file, the SOS refers it to the Franchise Tax Board, which assesses a penalty of
+      <strong>$250</strong> for most businesses and <strong>$50</strong> for exempt organizations.
+      The FTB collects it on the SOS's behalf — and <strong>only the SOS can waive it.</strong>
+    </p>
+    <p>
+      Beyond the money, continued failure to file can lead to <strong>suspension or forfeiture</strong>
+      of your entity. A suspended entity loses the right to do business in California, can't defend or
+      bring a lawsuit, and can lose the exclusive right to its own name.
+    </p>
+
+    <h3>Can I file it myself?</h3>
+    <p>
+      Yes. Filing is done at <a href="https://bizfileonline.sos.ca.gov/" target="_blank" rel="noopener">bizfile Online</a>
+      and the state fee is $25 for corporations and $20 for LLCs. The friction is the access step:
+      since <strong>August 1, 2026</strong> the state requires established User Access on your entity's
+      record before an online Statement of Information can be submitted. If your business hasn't set
+      that up, the state mails a PIN letter to your address on record — which takes about a week.
+    </p>
+
+    <div class="disclaim">
+      <strong>About this calculator.</strong> StatementDue is a private filing service operated by
+      FormRoute LLC. We are not affiliated with the California Secretary of State or any government
+      agency, we are not a law firm, and we do not provide legal or tax advice. This calculator applies
+      the state's published filing-window schedule to the date you enter. It cannot see your entity's
+      actual record, so it does not know whether a statement has already been filed this cycle, whether
+      your entity is in good standing, or whether a different rule applies to your situation. Confirm
+      your status and dates on your entity's record at
+      <a href="https://bizfileonline.sos.ca.gov/search/business" target="_blank" rel="noopener">the state's Business Search</a>
+      before relying on any date shown here.
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="f-links">
+    <a href="/">File a Statement of Information</a>
+    <a href="/deadline-checker.html">Deadline calculator</a>
+    <a href="/terms.html">Terms</a>
+    <a href="/privacy.html">Privacy</a>
+    <a href="mailto:support@statementdue.com">support@statementdue.com</a>
+  </div>
+  <p>© 2026 StatementDue — a service of FormRoute LLC. Not affiliated with any government agency.</p>
+</footer>
+
+<script>
+(function(){
+  'use strict';
+
+  // California Statement of Information — filing window calculator.
+  // The window runs from the first day of the 5th month before the anniversary
+  // month through the last day of the anniversary month (CA SOS schedule).
+  // Corporations file annually; LLCs and nonprofit corporations file biennially.
+  function soiStatus(regDateISO, entityType, today) {
+    var reg = new Date(regDateISO + 'T12:00:00');
+    if (isNaN(reg) || reg > today) return { error: 'invalid' };
+
+    var biennial = (entityType === 'llc' || entityType === 'nonprofit');
+    var regYear  = reg.getFullYear();
+    var annMonth = reg.getMonth();
+
+    function endOf(y)   { return new Date(y, annMonth + 1, 0, 12, 0, 0); }
+    function startOf(y) { return new Date(y, annMonth - 5, 1, 12, 0, 0); }
+
+    var initialDue = new Date(reg);
+    initialDue.setDate(initialDue.getDate() + 90);
+
+    var firstRegular = regYear + (biennial ? 2 : 1);
+    var due = null;
+    for (var y = firstRegular; y <= today.getFullYear() + 4; y++) {
+      if (biennial && ((y - regYear) % 2 !== 0)) continue;
+      if (endOf(y) >= today) { due = y; break; }
+    }
+    if (due === null) return { error: 'nodate' };
+
+    var winStart = startOf(due), winEnd = endOf(due), DAY = 86400000;
+    var open = today >= winStart && today <= winEnd;
+
+    return {
+      biennial: biennial,
+      initialDue: initialDue,
+      inInitialPeriod: today <= initialDue,
+      windowStart: winStart,
+      windowEnd: winEnd,
+      isOpen: open,
+      daysUntilOpen:  open ? 0 : Math.ceil((winStart - today) / DAY),
+      daysUntilClose: open ? Math.ceil((winEnd - today) / DAY) : null
+    };
+  }
+
+  var LABEL = {
+    corp:      { name: 'Corporation (stock)',  form: 'SI-550', fee: '$25', freq: 'Every year',    pen: '$250' },
+    llc:       { name: 'Limited Liability Company', form: 'LLC-12', fee: '$20', freq: 'Every 2 years', pen: '$250' },
+    nonprofit: { name: 'Nonprofit corporation', form: 'SI-100', fee: '$20', freq: 'Every 2 years', pen: '$50 (exempt organizations)' }
+  };
+
+  function fmt(d) {
+    return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+  }
+
+  document.getElementById('checkBtn').addEventListener('click', function () {
+    var type = document.getElementById('etype').value;
+    var date = document.getElementById('regdate').value;
+
+    if (!date) { alert('Enter the date your entity was registered with the state.'); return; }
+
+    var today = new Date(); today.setHours(12, 0, 0, 0);
+    var r = soiStatus(date, type, today);
+
+    if (r.error === 'invalid') {
+      alert('That date is either not valid or is in the future. Use the "Date Filed" shown on your entity’s record.');
+      return;
+    }
+    if (r.error) { alert('Something went wrong with that date. Please check it and try again.'); return; }
+
+    var L = LABEL[type];
+    document.getElementById('rType').textContent  = L.name + ' — Form ' + L.form;
+    document.getElementById('rFreq').textContent  = L.freq;
+    document.getElementById('rStart').textContent = fmt(r.windowStart);
+    document.getElementById('rEnd').textContent   = fmt(r.windowEnd);
+    document.getElementById('rFee').textContent   = L.fee;
+    document.getElementById('rPen').textContent   = L.pen;
+
+    var box = document.getElementById('statusBox');
+    if (r.isOpen) {
+      var urgent = r.daysUntilClose <= 30;
+      box.className = 'status ' + (urgent ? 'soon' : 'open');
+      box.innerHTML = '<b>' + (urgent ? 'Due soon — ' : 'Your window is open now.') + '</b>' +
+        'You can file today. The deadline is <strong>' + fmt(r.windowEnd) + '</strong>, ' +
+        which(r.daysUntilClose) + ' from now.';
+    } else {
+      box.className = 'status shut';
+      box.innerHTML = '<b>Nothing due right now.</b>' +
+        'Your next window opens <strong>' + fmt(r.windowStart) + '</strong> (' +
+        which(r.daysUntilOpen) + ' from now) and closes <strong>' + fmt(r.windowEnd) + '</strong>.';
+    }
+
+    var note = document.getElementById('initialNote');
+    if (r.inInitialPeriod) {
+      note.style.display = 'block';
+      note.innerHTML = '<strong>You registered recently.</strong> Your <em>initial</em> Statement of ' +
+        'Information is due within 90 days of registration — by <strong>' + fmt(r.initialDue) +
+        '</strong> — separately from the regular window above.';
+    } else {
+      note.style.display = 'none';
+    }
+
+    document.getElementById('result').style.display = 'block';
+    document.getElementById('result').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  function which(days) {
+    if (days <= 0)  return 'today';
+    if (days === 1) return '1 day';
+    if (days < 60)  return days + ' days';
+    var m = Math.round(days / 30.4);
+    return 'about ' + m + ' months';
+  }
+})();
+</script>
+
+</body>
+</html>
